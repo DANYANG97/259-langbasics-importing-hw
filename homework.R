@@ -18,8 +18,8 @@
 # Load the readr package
 
 # ANSWER
-#test
-#test
+
+library(readr)
 
 ### QUESTION 2 ----- 
 
@@ -47,7 +47,7 @@ col_names  <-  c("trial_num","speed_actual","speed_response","correct")
 
 # ANSWER
 
-
+ds1 <- read_tsv("data_A/6191_1.txt", col_names = col_names, skip = 7)
 
 ### QUESTION 3 ----- 
 
@@ -65,6 +65,7 @@ col_names  <-  c("trial_num","speed_actual","speed_response","correct")
 
 # ANSWER
 
+fullfilenames <- list.files("data_A", full.names = TRUE)
 
 ### QUESTION 5 ----- 
 
@@ -72,6 +73,7 @@ col_names  <-  c("trial_num","speed_actual","speed_response","correct")
 
 # ANSWER
 
+ds <- read_tsv(fullfilenames, skip = 7, col_names = col_names)
 
 ### QUESTION 6 -----
 
