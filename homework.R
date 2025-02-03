@@ -42,11 +42,9 @@ library(readr)
 # etc..
 
 # A list of column names are provided to use:
-
 col_names  <-  c("trial_num","speed_actual","speed_response","correct")
 
 # ANSWER
-
 ds1 <- read_tsv("data_A/6191_1.txt", col_names = col_names, skip = 7)
 
 ### QUESTION 3 ----- 
@@ -64,7 +62,6 @@ ds1 <- read_tsv("data_A/6191_1.txt", col_names = col_names, skip = 7)
 # Store it to a variable
 
 # ANSWER
-
 fullfilenames <- list.files("data_A", full.names = TRUE)
 
 ### QUESTION 5 ----- 
@@ -72,8 +69,8 @@ fullfilenames <- list.files("data_A", full.names = TRUE)
 # Read all of the files in data_A into a single tibble called ds
 
 # ANSWER
+ds <- read_tsv(fullfilenames, col_names = col_names, skip = 7)
 
-ds <- read_tsv(fullfilenames, skip = 7, col_names = col_names)
 
 ### QUESTION 6 -----
 
